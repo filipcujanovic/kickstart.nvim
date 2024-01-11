@@ -5,6 +5,17 @@
 -- Set highlight on search
 vim.o.hlsearch = false
 
+vim.o.hlsearch = false
+
+-- Set title
+vim.o.title = true
+
+-- Set titlelen
+-- vim.o.titlelen = true
+
+-- Set title string
+vim.o.titlestring = '%{fnamemodify(getcwd(), ":t")}'
+
 vim.o.shellcmdflag = '-ic'
 
 -- Make line numbers default
