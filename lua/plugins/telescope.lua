@@ -19,6 +19,7 @@ return {
     'BurntSushi/ripgrep',
   },
   config = function()
+    local actions = require 'telescope.actions'
     require('telescope').setup {
       extensions = {
         fzf = {
@@ -62,7 +63,10 @@ return {
         mappings = {
           i = {
             ['<C-u>'] = false,
-            ['<C-d>'] = false,
+            ['<C-d>'] = actions.delete_buffer,
+          },
+          n = {
+            ['<C-d>'] = actions.delete_buffer,
           },
         },
       },

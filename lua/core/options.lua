@@ -5,8 +5,6 @@
 -- Set highlight on search
 vim.o.hlsearch = false
 
-vim.o.hlsearch = false
-
 -- Set title
 vim.o.title = true
 

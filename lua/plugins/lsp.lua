@@ -43,10 +43,14 @@ end
 
 local servers = {
   -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
+  gopls = {
+    settings = {
+      telemetry = {
+        enabled = false,
+      },
+    },
+  },
   -- rust_analyzer = {},
-  -- tsserver = {},
   html = {
     settings = {
       telemetry = {
@@ -74,8 +78,12 @@ local servers = {
   },
   lua_ls = {
     Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
+      workspace = {
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
       -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
       -- diagnostics = { disable = { 'missing-fields' } },
     },
